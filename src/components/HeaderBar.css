@@ -1,0 +1,22 @@
+.header-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid #D0D5DD;
+    padding: 10px;
+    background-color: var(--component-background);
+    color: var(--text-on-component);
+}
+
+.header-bar__mode-toggle {
+    background-color: var(--theme-mode-toggle-background);
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+.header-bar__icon-dark {
+    filter: invert(1);
+}

@@ -1,0 +1,16 @@
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters__button--active {
+    background-color: var(--component-background-active);
+    color: var(--text-on-component-active);
+    border: none;
+}
+
+.filters__button--active:hover {
+    background-color: var(--component-background-hover);
+    color: var(--text-on-component-hover);
+}

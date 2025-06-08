@@ -1,0 +1,106 @@
+:root {
+    color-scheme: light dark;
+    --page-background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --component-background: hsl(200, 60%, 99%);
+    --component-background-hover: hsl(3, 86%, 64%);
+    --component-background-active: hsl(3, 77%, 44%);
+    --component-background-disabled: hsl(0, 0%, 78%);
+    --component-border: hsl(211, 32%, 89%);
+    --text: hsl(226, 25%, 17%);
+    --text-on-component: hsl(226, 25%, 17%);
+    --text-on-component-hover: hsl(217, 61%, 90%);
+    --text-on-component-active: hsl(200, 60%, 99%);
+    --switch-thumb-background: hsl(200, 60%, 99%);
+    --theme-mode-toggle-background: hsl(0, 0%, 78%);
+}
+
+body.theme-dark {
+    --page-background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --page-color: hsl(200, 60%, 99%);
+    --component-background: hsl(226, 25%, 17%);
+    --component-background-hover: hsl(3, 71%, 56%);
+    --component-background-active: hsl(3, 86%, 64%);
+    --component-background-disabled: hsl(220, 13%, 28%);
+    --component-border: hsl(220, 13%, 28%);
+    --text: hsl(0, 0%, 78%);
+    --text-on-component: hsl(0, 0%, 78%);
+    --text-on-component-hover: hsl(227, 75%, 14%);
+    --text-on-component-active: hsl(227, 75%, 14%);
+    --switch-thumb-background: hsl(200, 60%, 99%);
+    --theme-mode-toggle-background: hsl(225, 23%, 24%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('/assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('/assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+html {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: var(--page-background);
+    color: var(--page-color);
+    width: 100%;
+    height: 100vh;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.app {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.button {
+    border: 1px solid var(--component-border);
+    background-color: var(--component-background);
+    color: var(--text-on-component);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: var(--component-background-hover);
+    color: var(--text-on-component-hover);
+}
+
+.button:focus {
+    outline: 2px solid var(--component-background-active);
+    outline-offset: 2px;
+}
+
+.text {
+    color: var(--text);
+}
+
+
+@media screen and (min-width: 600px) {
+    .app {
+        width: 80%;
+        margin-top: 40px;
+    }
+}

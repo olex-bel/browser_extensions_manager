@@ -1,0 +1,33 @@
+
+.extension {
+    background-color: var(--component-background);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.extension__header {
+    display: flex;
+    gap: 20px;
+}
+
+.extension__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.extension__description {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .extension {
+        min-height: 220px;
+    }
+    
+}
