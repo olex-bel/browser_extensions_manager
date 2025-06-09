@@ -4,4 +4,5 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
 
 ### Built with
 - [React](https://reactjs.org/) - JS library
+- [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction) - State management library
 
