@@ -17,6 +17,10 @@
     border: none;
 }
 
+.header-bar__mode-toggle:hover {
+    background-color: var(--theme-mode-toggle-background-hover);
+}
+
 .header-bar__icon-dark {
     filter: invert(1);
 }

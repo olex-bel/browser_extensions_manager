@@ -1,8 +1,10 @@
 :root {
     color-scheme: light dark;
     --page-background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --page-color: hsl(227, 75%, 14%);
     --component-background: hsl(200, 60%, 99%);
     --component-background-hover: hsl(3, 86%, 64%);
+    --component-background-hover-secondary: hsl(0, 0%, 93%);
     --component-background-active: hsl(3, 77%, 44%);
     --component-background-disabled: hsl(0, 0%, 78%);
     --component-border: hsl(211, 32%, 89%);
@@ -10,8 +12,10 @@
     --text-on-component: hsl(226, 25%, 17%);
     --text-on-component-hover: hsl(217, 61%, 90%);
     --text-on-component-active: hsl(200, 60%, 99%);
+    --text-on-component-hover-secondary: hsl(226, 11%, 37%);
     --switch-thumb-background: hsl(200, 60%, 99%);
-    --theme-mode-toggle-background: hsl(0, 0%, 78%);
+    --theme-mode-toggle-background: hsl(0, 0%, 93%);
+    --theme-mode-toggle-background-hover: hsl(0, 0%, 78%);
 }
 
 body.theme-dark {
@@ -19,15 +23,18 @@ body.theme-dark {
     --page-color: hsl(200, 60%, 99%);
     --component-background: hsl(226, 25%, 17%);
     --component-background-hover: hsl(3, 71%, 56%);
+    --component-background-hover-secondary: hsl(226, 11%, 37%);
     --component-background-active: hsl(3, 86%, 64%);
     --component-background-disabled: hsl(220, 13%, 28%);
     --component-border: hsl(220, 13%, 28%);
     --text: hsl(0, 0%, 78%);
     --text-on-component: hsl(0, 0%, 78%);
     --text-on-component-hover: hsl(227, 75%, 14%);
+    --text-on-component-hover-secondary: hsl(0, 0%, 78%);
     --text-on-component-active: hsl(227, 75%, 14%);
     --switch-thumb-background: hsl(200, 60%, 99%);
     --theme-mode-toggle-background: hsl(225, 23%, 24%);
+    --theme-mode-toggle-background-hover: hsl(226, 11%, 37%);
 }
 
 * {
@@ -38,14 +45,14 @@ body.theme-dark {
 
 @font-face {
     font-family: 'Noto Sans';
-    src: url('/assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
+    src: url('/public/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Noto Sans';
-    src: url('/assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
+    src: url('/public/fonts/NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
@@ -59,7 +66,7 @@ body {
     background: var(--page-background);
     color: var(--page-color);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #root {
@@ -81,11 +88,17 @@ body {
     border-radius: 30px;
     padding: 10px 20px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .button:hover {
     background-color: var(--component-background-hover);
     color: var(--text-on-component-hover);
+}
+
+.button--secondary:hover {
+    background-color: var(--component-background-hover-secondary);
+    color: var(--text-on-component-hover-secondary);
 }
 
 .button:focus {
@@ -99,6 +112,7 @@ body {
 
 .attribution {
     text-align: center;
+    margin-top: 50px;
 }
 
 @media screen and (min-width: 600px) {

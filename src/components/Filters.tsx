@@ -18,7 +18,7 @@ export default function Filters() {
             {FILTERS.map(f => (
                 <button
                     key={f.type}
-                    className={`button${filter === f.type ? ' filters__button--active' : ''}`}
+                    className={`button ${filter === f.type ? 'filters__button--active' : 'button--secondary'}`}
                     onClick={() => setFilter(f.type)}
                 >
                     {f.label}
