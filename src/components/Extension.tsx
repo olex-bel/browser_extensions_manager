@@ -38,7 +38,11 @@ export default function Extension({ item }: ExtensionProps) {
             </div>
             <div className="extension__controls">
                 <button className="button" onClick={handleRemove}>Remove</button>
-                <TogleSwitch isEnabled={isActive} onToggle={handleToggle} />
+                <TogleSwitch 
+                    isEnabled={isActive}
+                    ariaLabel={isActive ? "Disable Extension" : "Enable Extension"}
+                    onToggle={handleToggle} 
+                />
             </div>
         </div>
     );
